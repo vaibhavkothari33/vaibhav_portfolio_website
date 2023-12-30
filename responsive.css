@@ -1,0 +1,425 @@
+@media screen and (max-width: 1024px) {
+  .nav5 {
+    position: absolute;
+    left: 1238px;
+    width: 100px;
+  }
+  .nav4 {
+    position: absolute;
+    left: 1147px;
+  }
+  .nav3 {
+    position: absolute;
+    left: 1033px;
+  }
+  .nav2 {
+    position: absolute;
+    left: 930px;
+  }
+  .tag {
+    height: 120px;
+    width: 84%;
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    top: 360px;
+    left: 275px;
+  }
+  .about {
+    height: 450px;
+    width: 800px;
+    position: absolute;
+    top: 700px;
+    right: -279px;
+  }
+  .pro {
+    height: 325px;
+    width: 350px;
+  }
+  .image {
+    height: 150px;
+    width: 350px;
+  }
+
+  .projects1 {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 1350px;
+    left: 181px;
+    text-align: center;
+    color: white;
+    background: transparent;
+    font-size: 55px;
+  }
+
+  .about2 {
+    height: 5px;
+    width: 130.5%;
+    background-color: red;
+  }
+  .con {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 1947px;
+    left: 155px;
+  }
+  .pro3 {
+    position: absolute;
+    top: 1500px;
+    right: -234px;
+  }
+  .pro2 {
+    position: absolute;
+    top: 1500px;
+    left: 440px;
+  }
+  .pro1 {
+    position: absolute;
+    top: 1500px;
+    left: 33px;
+  }
+  .vaibhav {
+    height: 40px;
+    width: 180px;
+    /* background-color: red; */
+    color: white;
+    position: absolute;
+    top: 1425px;
+    right: -271px;
+  }
+  .footer {
+    height: 340px;
+    width: 127%;
+  }
+  .contact1 {
+    height: 5px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 1944px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about2 {
+    height: 5px;
+    width: 173.5%;
+  }
+  .nav5 {
+    position: absolute;
+    left: 1200px;
+    width: 100px;
+  }
+  .nav4 {
+    position: absolute;
+    left: 1100px;
+  }
+  .nav3 {
+    position: absolute;
+    left: 970px;
+  }
+  .nav2 {
+    position: absolute;
+    left: 850px;
+  }
+  .tag {
+    height: 120px;
+    width: 110%;
+  }
+  .tag {
+    height: 120px;
+    width: 106%;
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    top: 443px;
+  }
+  .name {
+    height: 100px;
+    width: 250px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 300px;
+  }
+  .video1 {
+    border-radius: 50%;
+    position: absolute;
+    top: 107px;
+    left: 600px;
+  }
+
+  .title {
+    width: 100%;
+    position: absolute;
+    left: 300px;
+    top: 325px;
+  }
+  .about {
+    height: 450px;
+    width: 800px;
+    position: absolute;
+    top: 700px;
+    right: -500px;
+  }
+  .projects1 {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 1270px;
+    left: 305px;
+  }
+  .vaibhav {
+    height: 40px;
+    width: 180px;
+    /* background-color: red; */
+    color: white;
+    position: absolute;
+    top: 1380px;
+    right: -510px;
+  }
+  .pro3 {
+    position: absolute;
+    top: 1500px;
+    right: -487px;
+  }
+  .pro2 {
+    position: absolute;
+    top: 1500px;
+    left: 431px;
+  }
+  .pro1 {
+    position: absolute;
+    top: 1500px;
+    left: 12px;
+  }
+  .con {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 1947px;
+    left: 280px;
+  }
+  .footer {
+    height: 340px;
+    width: 168%;
+  }
+}
+
+/* Mobile phone 430 */
+@media screen and (max-width: 430px) {
+    .nav2,
+    .nav5 {
+      display: none;
+    }
+    /* body{
+        height: 5000px;
+    } */
+  .nav11 {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    border: 4px solid yellow;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+  }
+  .nav1 {
+    display: none;
+  }
+  .nav3 {
+    position: absolute;
+    left: 130px;
+    top: 40px;
+    font-size: 30px;
+  }
+  .nav4 {
+    position: absolute;
+    left: 300px;
+    top: 40px;
+    font-size: 30px;
+  }
+  .about2 {
+    height: 5px;
+    width: 99.5%;
+  }
+  .video1 {
+    border-radius: 50%;
+    position: absolute;
+    top: 107px;
+    left: 143px;
+  }
+  .name {
+    height: 100px;
+    width: 250px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 280px;
+    left: 130px;
+  }
+  .title {
+    width: 100%;
+    position: absolute;
+    left: 6px;
+    top: 305px;
+  }
+  .tag {
+    height: 120px;
+    width: 93%;
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 410px;
+    left: 50px;
+  }
+  .with {
+    padding-left: 150px;
+  }
+  .tagg{
+    /* padding-left: 0px; */
+    position: absolute;
+    top: 78px;
+    left: -50px;
+  }
+  .rubiks {
+    position: absolute;
+    top: 592px;
+    left: 23px;
+}
+.about {
+    height: 557px;
+    width: 403px;
+    position: absolute;
+    top: 862px;
+    right: 4px;
+    font-size: 10px;
+}
+.projects1 {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 1480px;
+    left: -5px;
+}
+.pro1 {
+    position: absolute;
+    top: 1619px;
+    left: -20px;
+}
+.pro2 {
+    position: absolute;
+    top: 1990px;
+    left: -20px;
+}
+.pro3 {
+    position: absolute;
+    top: 2370px;
+    left: -20px;
+}
+.vaibhav {
+    height: 30px;
+    width: 130px;
+    font-size: 19px;
+    color: white;
+    position: absolute;
+    top: 1565px;
+    right: 20px;
+}
+.con {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 2750px;
+    left: -4px;
+}
+.contact-form {
+    height: 15%;
+    width: 60%;
+    /* background-color: red; */
+    color: white;
+    position: absolute;
+    top: 2800px;
+    left: 90px;
+}
+.footer {
+    height: 800px;
+    width: 90%;
+    background-color: rgb(26, 0, 75);
+    position: absolute;
+    top: 3300px;
+    left: 17px;
+    border-radius: 15px;
+    /* margin: 10px; */
+}
+.text22{
+    text-align: center;
+}
+.text1 {
+    /* border: 4px solid black; */
+    width: 330px;
+    height: 230px;
+    margin-left: 45px;
+    margin-top: 25px;
+    font-size: 20px;
+    color: white;
+}
+.text2 {
+    /* border: 4px solid yellow; */
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 344px;
+    left: -140px;
+}
+.text3 {
+    /* border: 4px solid yellow; */
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 344px;
+    left: 120px;
+}
+.if{
+    text-align: center;
+}
+.nameof {
+    font-size: 25px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 640px;
+    left: 95px;
+}
+.line {
+    height: 5px;
+    width: 94%;
+    background-color: green;
+    position: absolute;
+    top: 550px;
+    left: 12px;
+}
+.linkss {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    top: 575px;
+    right: 20px;
+    text-align: center;
+    align-items: center;
+    justify-self: justify;
+}
+.contact1 {
+    height: 5px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 2700px;
+  }
+
+}

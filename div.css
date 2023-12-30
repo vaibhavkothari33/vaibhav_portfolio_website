@@ -1,0 +1,52 @@
+.animated-border {
+    position: relative;
+    /* width: 200px;
+    height: 200px; */
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+ .border {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+    border: 4px solid transparent;
+    border-radius: 50px;
+    border-image: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+    border-image-slice: 1;
+    animation: borderAnimation 5s linear infinite;
+} 
+.border{
+    /* border: 4px solid transparent;
+    border-radius: 40px; */
+    background: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+    border-image-slice: 1;
+    animation: backgroundAnimation 5s linear infinite;
+
+}
+
+
+/* @keyframes backgroundAnimation { */
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+    }
+
+    25% {
+        border-image-source: linear-gradient(45deg, #e74c3c, #f39c12, #e74c3c, #f39c12);
+    }
+
+    50% {
+        border-image-source: linear-gradient(45deg, #27ae60, #2ecc71, #27ae60, #2ecc71);
+    }
+
+    75% {
+        border-image-source: linear-gradient(45deg, #f39c12, #e74c3c, #f39c12, #e74c3c);
+    }
+
+    100% {
+        border-image-source: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+    }
+}

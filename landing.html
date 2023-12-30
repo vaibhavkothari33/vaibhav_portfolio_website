@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Your Name - Portfolio</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.animated-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    z-index: 1;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #c0392b;
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.about h2,
+.skills h2,
+.projects h2,
+.contact h2 {
+    color: #333;
+}
+
+.about p,
+.skills ul,
+.projects .project p,
+.contact p {
+    color: #555;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+}
+
+.projects .project {
+    margin-top: 30px;
+}
+
+.projects .project h3 {
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="animated-bg"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Your Name</h1>
+        <p>Web Developer & Machine Learning Enthusiast</p>
+        <a href="#contact" class="cta-btn">Contact Me</a>
+    </div>
+</div>
+
+<div class="about">
+    <div class="content">
+        <h2>About Me</h2>
+        <p>Hello! I'm Your Name, a passionate web developer currently exploring the exciting world of machine learning. I love turning ideas into reality through code and continuous learning.</p>
+    </div>
+</div>
+
+<div class="skills">
+    <div class="content">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Python, Django</li>
+            <li>Machine Learning, TensorFlow</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </div>
+</div>
+
+<div class="projects">
+    <div class="content">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+</div>
+
+<div id="contact" class="contact">
+    <div class="content">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaboration or any inquiries.</p>
+        <a href="mailto:your.email@example.com" class="cta-btn">Send Email</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

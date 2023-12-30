@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav's Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d88f3c18b6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(28, 28, 28);
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            height: 120px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 55px;
+            padding-top: 25px;
+        }
+
+        /* ********************************************** */
+        .pro {
+            height: 375px;
+            width: 400px;
+            background-color: rgb(77, 0, 149);
+            text-align: center;
+            align-items: center;
+            margin-left: 60px;
+            border-radius: 40px;
+        }
+
+        img {
+            height: 200px;
+            width: 400px;
+            align-items: center;
+            text-align: center;
+            border-radius: 40px;
+        }
+
+        .github {
+            height: 10%;
+            width: 80%;
+            margin-left: 40px;
+            margin-top: 10px;
+            cursor: pointer;
+            color: white;
+            background-color: rgb(28, 28, 28);
+            font-size: 20px;
+            text-align: center;
+            border-radius: 50px;
+
+        }
+
+        .preview {
+            height: 10%;
+            width: 80%;
+            margin-left: 40px;
+            cursor: pointer;
+            color: white;
+            background-color: rgb(28, 28, 28);
+            font-size: 20px;
+            text-align: center;
+            border-radius: 50px;
+        }
+
+        .pro1 {
+            position: absolute;
+            top: 160px;
+            left: -30px;
+        }
+
+        .pro2 {
+            position: absolute;
+            top: 160px;
+            left: 415px;
+        }
+
+        .pro3 {
+            position: absolute;
+            top: 160px;
+            left: 860px;
+        }
+
+        .pro4 {
+            position: absolute;
+            top: 660px;
+            left: -30px;
+        }
+
+        .pro5 {
+            position: absolute;
+            top: 660px;
+            left: 415px;
+        }
+
+        .pro6 {
+            position: absolute;
+            top: 660px;
+            left: 860px;
+        }
+
+        .pro7 {
+            position: absolute;
+            top: 1160px;
+            left: -30px;
+        }
+
+        .pro8 {
+            position: absolute;
+            top: 1160px;
+            left: 415px;
+        }
+
+        .pro9 {
+            position: absolute;
+            top: 1160px;
+            left: 860px;
+        }
+
+        .pro10 {
+            position: absolute;
+            top: 1660px;
+            left: -30px;
+        }
+
+        .pro11 {
+            position: absolute;
+            top: 1660px;
+            left: 415px;
+        }
+
+        .pro12 {
+            position: absolute;
+            top: 1660px;
+            left: 860px;
+        }
+
+        .text {
+            height: 30px;
+            width: 100%;
+            color: white;
+            font-size: 20px;
+        }
+
+        .button {
+            height: 50px;
+            width: 50px;
+            background-color: green;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 15px;
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            color: white;
+        }
+
+        .fa-solid {
+            padding-top: 10px;
+            font-size: 30px;
+        }
+
+        .button:hover {
+            box-shadow: 0 0 20px 5px rgba(36, 155, 9, 0.7);
+        }
+
+        @media screen and (max-width:1024px) {
+            .pro {
+                height: 325px;
+                width: 350px;
+                background-color: rgb(77, 0, 149);
+                text-align: center;
+                align-items: center;
+                margin-left: 60px;
+                border-radius: 40px;
+            }
+
+            img {
+                height: 200px;
+                width: 350px;
+                align-items: center;
+                text-align: center;
+                border-radius: 40px;
+            }
+
+            .github {
+                height: 10%;
+                width: 70%;
+                margin-left: 50px;
+                margin-top: 5px;
+                cursor: pointer;
+                color: white;
+                background-color: rgb(28, 28, 28);
+                font-size: 20px;
+                text-align: center;
+                border-radius: 50px;
+
+            }
+
+            .preview {
+                height: 10%;
+                width: 70%;
+                margin-left: 50px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                color: white;
+                background-color: rgb(28, 28, 28);
+                font-size: 20px;
+                text-align: center;
+                border-radius: 50px;
+            }
+
+            .pro1 {
+                position: absolute;
+                top: 160px;
+                left: 30px;
+            }
+
+            .pro4 {
+                position: absolute;
+                top: 560px;
+                left: 30px;
+            }
+
+            .pro3 {
+                position: absolute;
+                top: 960px;
+                left: 30px;
+            }
+
+            .pro2 {
+                position: absolute;
+                top: 160px;
+                left: 515px;
+            }
+
+            .pro5 {
+                position: absolute;
+                top: 560px;
+                left: 515px;
+            }
+
+            .pro6 {
+                position: absolute;
+                top: 960px;
+                left: 515px;
+            }
+
+            .pro7 {
+                position: absolute;
+                top: 1360px;
+                left: 30px;
+            }
+
+            .pro8 {
+                position: absolute;
+                top: 1360px;
+                left: 515px;
+            }
+
+            .pro9 {
+                position: absolute;
+                top: 1760px;
+                left: 30px;
+            }
+
+            .pro10 {
+                position: absolute;
+                top: 1760px;
+                left: 515px;
+            }
+
+            .pro11 {
+                position: absolute;
+                top: 2160px;
+                left: 30px;
+            }
+
+            .pro12 {
+                position: absolute;
+                top: 2160px;
+                left: 515px;
+            }
+        }
+
+        /* tablet *********************************** */
+        @media screen and (max-width:770px) {
+            .pro {
+                height: 300px;
+                width: 325px;
+                background-color: rgb(77, 0, 149);
+                text-align: center;
+                align-items: center;
+                margin-left: 60px;
+                border-radius: 40px;
+            }
+
+            img {
+                height: 175px;
+                width: 325px;
+                align-items: center;
+                text-align: center;
+                border-radius: 40px;
+            }
+
+            .github {
+                height: 10%;
+                width: 70%;
+                margin-left: 50px;
+                margin-top: 5px;
+                cursor: pointer;
+                color: white;
+                background-color: rgb(28, 28, 28);
+                font-size: 20px;
+                text-align: center;
+                border-radius: 50px;
+
+            }
+
+            .preview {
+                height: 10%;
+                width: 70%;
+                margin-left: 50px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                color: white;
+                background-color: rgb(28, 28, 28);
+                font-size: 20px;
+                text-align: center;
+                border-radius: 50px;
+            }
+
+            .pro1 {
+                position: absolute;
+                top: 160px;
+                left: -45px;
+            }
+
+            .pro4 {
+                position: absolute;
+                top: 560px;
+                left: -45px;
+            }
+
+            .pro3 {
+                position: absolute;
+                top: 960px;
+                left: -45px;
+            }
+
+            .pro2 {
+                position: absolute;
+                top: 160px;
+                left: 350px;
+            }
+
+            .pro5 {
+                position: absolute;
+                top: 560px;
+                left: 350px;
+            }
+
+            .pro6 {
+                position: absolute;
+                top: 960px;
+                left: 350px;
+            }
+
+            .pro7 {
+                position: absolute;
+                top: 1360px;
+                left: -45px;
+            }
+
+            .pro8 {
+                position: absolute;
+                top: 1360px;
+                left: 350px;
+            }
+
+            .pro9 {
+                position: absolute;
+                top: 1760px;
+                left: -45px;
+            }
+
+            .pro10 {
+                position: absolute;
+                top: 1760px;
+                left: 350px;
+            }
+
+            .pro11 {
+                position: absolute;
+                top: 2160px;
+                left: -45px;
+            }
+
+            .pro12 {
+                position: absolute;
+                top: 2160px;
+                left: 350px;
+            }
+        }
+
+        /* Mobile phone*********************** */
+        @media screen and (max-width:430px) {
+            .pro {
+                height: 325px;
+                width: 350px;
+                background-color: rgb(77, 0, 149);
+                text-align: center;
+                align-items: center;
+                margin-left: 60px;
+                border-radius: 40px;
+            }
+
+            img {
+                height: 200px;
+                width: 350px;
+                align-items: center;
+                text-align: center;
+                border-radius: 40px;
+            }
+
+            .github {
+                height: 10%;
+                width: 70%;
+                margin-left: 50px;
+                padding-top: 2px;
+                margin-top: 3px;
+                cursor: pointer;
+                color: white;
+                background-color: rgb(28, 28, 28);
+                font-size: 15px;
+                text-align: center;
+                border-radius: 50px;
+
+            }
+
+            .preview {
+                height: 10%;
+                width: 70%;
+                margin-left: 50px;
+                /* margin-bottom: 10px; */
+                cursor: pointer;
+                color: white;
+                background-color: rgb(28, 28, 28);
+                font-size: 15px;
+                text-align: center;
+                border-radius: 50px;
+            }
+            .fa-solid {
+            padding-top: 5px;
+            font-size: 30px;
+        }
+
+
+            .pro1 {
+                position: absolute;
+                top: 160px;
+                left: -17px;
+            }
+
+            .pro4 {
+                position: absolute;
+                top: 1360px;
+                left: -17px;
+            }
+
+            .pro3 {
+                position: absolute;
+                top: 960px;
+                left: -17px;
+            }
+
+            .pro2 {
+                position: absolute;
+                top: 560px;
+                left: -17px;
+            }
+
+            .pro5 {
+                position: absolute;
+                top: 1760px;
+                left: -17px;
+            }
+
+            .pro6 {
+                position: absolute;
+                top: 2160px;
+                left: -17px;
+            }
+
+            .pro7 {
+                position: absolute;
+                top: 2560px;
+                left: -17px;
+            }
+
+            .pro8 {
+                position: absolute;
+                top: 2960px;
+                left: -17px;
+            }
+
+            .pro9 {
+                position: absolute;
+                top: 3360px;
+                left: -17px;
+            }
+
+            .pro10 {
+                position: absolute;
+                top: 3760px;
+                left: -17px;
+            }
+
+            .pro11 {
+                position: absolute;
+                top: 4160px;
+                left: -17px;
+            }
+
+            .pro12 {
+                position: absolute;
+                top: 4560px;
+                left: -17px;
+            }
+
+            nav {
+                height: 80px;
+                width: 94%;
+                color: white;
+                text-align: center;
+                font-size: 55px;
+                padding-top: 25px;
+                margin-left: 20px;
+            }
+
+            .button {
+                height: 40px;
+                width: 40px;
+                background-color: green;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 8px;
+                position: absolute;
+                top: 20px;
+                left: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="cursor-container">
+        <nav class="navigation">Projects</nav>
+        <a href="index.html">
+            <div class="button"><i class="fa-solid fa-arrow-left"></i></div>
+        </a>
+        <div class="pro pro1">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Spotify Clone <br><br><br></div>
+            <a href="experience.html" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="new.html" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div>
+        <div class="pro pro2">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Full Stack Club webite <br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div>
+        <div class="pro pro3">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Game using J_query <br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div>
+        <div class="pro pro4">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Amination using css <br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div>
+        <div class="pro pro5">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text"> Bla Bla cab<br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div>
+        <div class="pro pro6">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Startup <br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div>
+        <!-- <div class="pro pro7">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Css animation for beginners<br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div> -->
+        <!-- <div class="pro pro8">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Shopping website <br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div> -->
+        <!-- <div class="pro pro9">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Lost and Found<br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div> -->
+        <!-- <div class="pro pro10">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Games<br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div> -->
+        <!-- <div class="pro pro11">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Old portfolio <br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div> -->
+        <!-- <div class="pro pro12">
+            <div class="proimg"><img src="rubikscube.png" alt=""></div>
+            <div class="text">Mummy ka birthday <br><br><br></div>
+            <a href="" target="_blank">
+                <div class="github">Github</div>
+            </a><br>
+            <a href="" target="_blank">
+                <div class="preview">Preview</div>
+            </a>
+        </div> -->
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

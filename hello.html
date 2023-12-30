@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Journey Flowchart</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+}
+
+.flowchart-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.node {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+    max-width: 250px; /* Adjust the width as needed */
+}
+
+.node:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.techTeam,
+.schoolConnection {
+    margin-top: 10px;
+}
+
+.arrow {
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 10px;
+    z-index: 0;
+}
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #fff;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="flowchart-container">
+    <div class="node" id="highSchool">
+        <div class="content">
+            <h2>High School</h2>
+            <p>Your academic journey started here.</p>
+        </div>
+    </div>
+    <div class="arrow"></div>
+    <div class="node" id="bennettUniversity">
+        <div class="content">
+            <h2>Bennett University</h2>
+            <p>Currently in the second semester, pursuing exciting opportunities.</p>
+            <div class="details">
+                <div class="techTeam">
+                    <h3>Tech Team</h3>
+                    <p>Member of Full Stack team and Geeks for Geeks.</p>
+                    <!-- Image placeholder for logos -->
+                    <img src="logo_placeholder.png" alt="Tech Team Logos">
+                </div>
+                <div class="schoolConnection">
+                    <h3>School Connection</h3>
+                    <p>Connected with Mahaver Public School.</p>
+                    <!-- Image placeholder for school logo -->
+                    <img src="school_logo_placeholder.png" alt="School Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+    <div class="node" id="fullStackTeam">
+        <div class="content">
+            <h2>Full Stack Team at GFG</h2>
+            <p>Became part of a dynamic team, contributing to Full Stack development.</p>
+        </div>
+    </div>
+    <div class="arrow"></div>
+    <div class="node" id="machineLearning">
+        <div class="content">
+            <h2>Machine Learning Enthusiast</h2>
+            <p>Currently exploring the exciting world of Machine Learning.</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

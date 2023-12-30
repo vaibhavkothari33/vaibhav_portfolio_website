@@ -1,0 +1,38 @@
+.cursor-container {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  /* pointer-events: none; */
+  /* z-index: 9999; */
+  width: 100%;
+  height:100%;
+}
+
+.cursor {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #3498db;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: background-color 0.5s;
+}
+
+.bubble {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  animation: burst 0.5s ease-out;
+  pointer-events: none;
+}
+
+@keyframes burst {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

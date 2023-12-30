@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: rgb(0, 0, 35);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        #terminal-window {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            border: 2px solid green;
+            border-radius: 10px;
+            padding: 20px;
+            width: 60%;
+            max-width: 600px;
+        }
+
+        #terminal {
+            white-space: pre-wrap;
+            height: 400px;
+        }
+
+        #terminal-input {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: calc(90%);
+            height: 20px;
+            background-color: rgb(35, 35, 35);
+            color: white;
+            border: none;
+            outline: none;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-container">
+    <div id="terminal-window">
+        <div id="terminal">Welcome! Type a <span>help</span> command to get started.</div>
+        <input id="terminal-input" type="text">
+    </div>
+    <script>
+        const terminal = document.getElementById('terminal');
+        const terminalInput = document.getElementById('terminal-input');
+
+        // Flag to track whether a command is being executed
+        let isExecuting = false;
+
+        function writeToTerminal(message) {
+            terminal.innerHTML += message + '\n';
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function executeCommand(input) {
+            switch (input) {
+                case 'about':
+                    writeToTerminal('Hello, I\'m Vaibhav Kothari, a 18 year old average college going guy who is an ambitious and versatile technology enthusiast with a passion for exploring new tech stacks.');
+                    break;
+                case 'experience':
+                    writeToTerminal('Experience: [ Web Developer at XYZ ]');
+                    break;
+                case 'education':
+                    writeToTerminal('Education: [ B.Tech in Computer Science from Bennet University University ]');
+                    break;
+                case 'skills':
+                    writeToTerminal('Skills: [ JavaScript, Python, HTML, CSS, React, Node.js, Express ]');
+                    break;
+                case 'contact':
+                    writeToTerminal('Contact: [ contact.vaibhavkothari@gmail.com ]');
+                    break;
+                case 'help':
+                    writeToTerminal('Supported commands: [ "about", "experience", "education", "skills", "contact" ,"clear"]');
+                    break;
+                case 'clear':
+                    terminal.innerHTML = ''; // Clear the terminal content
+                    break;
+                default:
+                    writeToTerminal('Unknown command: ' + input);
+                    break;
+            }
+
+            // Mark the command execution as completed
+            isExecuting = false;
+
+            // Enable input after execution
+            terminalInput.disabled = false;
+            terminalInput.focus();
+        }
+
+        function processCommand() {
+            if (!isExecuting) {
+                const input = terminalInput.value.trim();
+                terminalInput.value = '';
+
+                // Mark the command execution as started
+                isExecuting = true;
+
+                // Disable input during execution
+                terminalInput.disabled = true;
+
+                executeCommand(input);
+            }
+        }
+
+        terminalInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                processCommand();
+            }
+        });
+    </script>
+    </div>
+</body>
+</html>

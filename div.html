@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(0, 0, 39);
+        }
+
+        .animated-border {
+            position: relative;
+            /* width: 200px;
+            height: 200px; */
+            /* overflow: hidden; */
+            border-radius: 40px;
+        }
+
+        .border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid transparent;
+            border-radius: 40px;
+            border-image: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+            border-image-slice: 1;
+            border-image: ra;
+            animation: borderAnimation 5s linear infinite;
+        }
+
+        .b1 {
+            position: absolute;
+            top: 00px;
+            left: 150%;
+        }
+
+        .b2 {
+            position: absolute;
+            top: 00px;
+            right: 150%;
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-image-source: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+            }
+
+            25% {
+                border-image-source: linear-gradient(45deg, #e74c3c, #f39c12, #e74c3c, #f39c12);
+            }
+
+            50% {
+                border-image-source: linear-gradient(45deg, #27ae60, #2ecc71, #27ae60, #2ecc71);
+            }
+
+            75% {
+                border-image-source: linear-gradient(45deg, #f39c12, #e74c3c, #f39c12, #e74c3c);
+            }
+
+            100% {
+                border-image-source: linear-gradient(45deg, #3498db, #9b59b6, #3498db, #9b59b6);
+            }
+        }
+    </style>
+    <title>Animated Border</title>
+</head>
+
+<body>
+    
+    <div class="cursor-container">
+
+        <div class="animated-border">
+            <div class="border">Hello world</div>
+            <div class="border b1">Hello world</div>
+        <div class="border b2">Hello world</div>
+    </div>
+
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let cursor = $(".cursor");
+            let cursorContainer = $(".cursor-container");
+
+            $(document).on("mousemove", function (e) {
+                cursor.css({
+                    top: e.clientY + "px",
+                    left: e.clientX + "px",
+                });
+
+                let bubble = $("<div class='bubble'></div>");
+                bubble.css({
+                    top: e.clientY + "px",
+                    left: e.clientX + "px",
+                });
+
+                cursorContainer.append(bubble);
+
+                // Remove bubble after animation completes
+                bubble.on("animationend", function () {
+                    $(this).remove();
+                });
+            });
+
+            $(document).on("click", function (e) {
+                // Perform actions when the user clicks on the screen
+                // For example, open a modal, navigate to a page, etc.
+
+                // Create a larger burst for the click event
+                let clickBubble = $("<div class='bubble'></div>");
+                clickBubble.css({
+                    top: e.clientY + "px",
+                    left: e.clientX + "px",
+                    width: "40px",
+                    height: "40px",
+                });
+
+
+
+                // Remove click bubble after animation completes
+                clickBubble.on("animationend", function () {
+                    $(this).remove();
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(0, 0, 39);
+        }
+
+        .animated-border {
+            position: relative;
+            width: 150px;
+            height: 300px;
+            /* overflow: hidden; */
+        }
+
+        .border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-radius: 20%;
+            border-image: linear-gradient(45deg, #3498db, #5dade2, #85c1e9, #aed6f1, #d6eaf8);
+            border-image-slice: 1;
+            animation: borderAnimation 5s linear infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-image-source: linear-gradient(45deg, #3498db, #5dade2, #85c1e9, #aed6f1, #d6eaf8);
+            }
+            25% {
+                border-image-source: linear-gradient(45deg, #5dade2, #85c1e9, #aed6f1, #d6eaf8, #3498db);
+            }
+            50% {
+                border-image-source: linear-gradient(45deg, #85c1e9, #aed6f1, #d6eaf8, #3498db, #5dade2);
+            }
+            75% {
+                border-image-source: linear-gradient(45deg, #aed6f1, #d6eaf8, #3498db, #5dade2, #85c1e9);
+            }
+            100% {
+                border-image-source: linear-gradient(45deg, #d6eaf8, #3498db, #5dade2, #85c1e9, #aed6f1);
+            }
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+    <title>Three Divs with Animated Border</title>
+</head>
+<body>
+
+<div class="animated-border">
+    <div class="border"></div>
+</div>
+
+<div class="animated-border">
+    <div class="border"></div>
+</div>
+
+<div class="animated-border">
+    <div class="border"></div>
+</div>
+
+</body>
+</html> -->
