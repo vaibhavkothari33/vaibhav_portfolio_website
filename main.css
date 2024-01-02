@@ -78,7 +78,7 @@ h1 {
 }
 
 .move::before {
-    content: "Student";
+    content:"Student";
     animation: animate infinite 5s;
     padding-left: 10px;
     color: yellow;
@@ -87,6 +87,9 @@ h1 {
 @keyframes animate {
 
     0% {
+        content: "Student";
+    }
+    25% {
         content: "Web Developer";
     }
 
@@ -94,7 +97,7 @@ h1 {
         content: "Passionate Coder ";
     }
 
-    70% {
+    75% {
         content: "ML Enthusiastic";
     }
 
