@@ -486,7 +486,7 @@
     color: white;
     flex-wrap: wrap;
     flex-direction: row;
-   }
+  }
 
   .title {
     width: 120%;
@@ -651,10 +651,70 @@
     position: absolute;
     top: 2700px;
   }
+  .e1 {
+    position: absolute;
+    top: 97px;
+    left: -24px;
+  }
+  .l1 {
+    margin-top: 94px;
+    margin-left: -25px;
+  }
+  .l5 {
+    margin-top: 160px;
+    margin-left: -25px;
+  }
+  .e3 {
+    position: absolute;
+    top: 157px;
+    left: -24px;
+  }
+  .e2 {
+    position: absolute;
+    top: 217px;
+    left: -24px;
+  }
+  .l2 {
+    margin-top: 215px;
+    margin-left: -25px;
+  }
+  .e5 {
+    position: absolute;
+    top: 277px;
+    left: -24px;
+  }
+  .l3 {
+    margin-top: 275px;
+    margin-left: -25px;
+  }
+  textarea {
+    resize: none;
+    height: 71px;
+    width: 221px;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 343px;
+    left: -24px;
+  }
+  .e4 {
+    position: absolute;
+    top: 452px;
+    left: -20px;
+}
+  .footer {
+    height: 715px;
+    width: 124%;
+    background-color: rgb(26, 0, 75);
+    position: absolute;
+    top: 3260px;
+  }
 }
 
 /* ********************************************** */
-@media screen and (max-width: 290px) {  
+@media screen and (max-width: 290px) {
   .nav2,
   .nav5 {
     display: none;
@@ -698,7 +758,7 @@
     top: 107px;
     left: 143px;
   }
-  
+
   .name {
     height: 100px;
     width: 250px;
@@ -755,20 +815,22 @@
   .pro {
     height: 300px;
     width: 320px;
-}
-.image {
-  height: 150px;
-  width: 310px;
-  padding-top: 4px;
-}
-.github {
-  height: 10%;
-  width: 80%;
-  margin-left: 33px;}
+  }
+  .image {
+    height: 150px;
+    width: 310px;
+    padding-top: 4px;
+  }
+  .github {
+    height: 10%;
+    width: 80%;
+    margin-left: 33px;
+  }
   .preview {
     height: 10%;
     width: 80%;
-    margin-left: 33px;}
+    margin-left: 33px;
+  }
   .pro1 {
     position: absolute;
     top: 1619px;
@@ -788,8 +850,8 @@
   element.style {
     width: 180%;
     height: 120%;
-}
-/* ***************************** */
+  }
+  /* ***************************** */
   .vaibhav {
     height: 30px;
     width: 130px;
@@ -895,13 +957,13 @@
     position: absolute;
     top: 2700px;
   }
-  .fa-terminal{
-    height:1.25rem ; 
+  .fa-terminal {
+    height: 1.25rem;
     width: 1.25rem;
   }
 }
 
-@media screen and (max-width: 220px) {  
+@media screen and (max-width: 220px) {
   .nav2,
   .nav5 {
     display: none;
@@ -939,7 +1001,7 @@
     height: 5px;
     width: 198%;
   }
-  h1{
+  h1 {
     text-align: center;
     padding-left: 40px;
     width: 290px;
@@ -950,7 +1012,7 @@
     top: 107px;
     left: 143px;
   }
-  
+
   .name {
     height: 100px;
     width: 250px;
@@ -1008,20 +1070,22 @@
   .pro {
     height: 300px;
     width: 320px;
-}
-.image {
-  height: 150px;
-  width: 310px;
-  padding-top: 4px;
-}
-.github {
-  height: 10%;
-  width: 80%;
-  margin-left: 33px;}
+  }
+  .image {
+    height: 150px;
+    width: 310px;
+    padding-top: 4px;
+  }
+  .github {
+    height: 10%;
+    width: 80%;
+    margin-left: 33px;
+  }
   .preview {
     height: 10%;
     width: 80%;
-    margin-left: 33px;}
+    margin-left: 33px;
+  }
   .pro1 {
     position: absolute;
     top: 1619px;
@@ -1041,8 +1105,8 @@
   element.style {
     width: 180%;
     height: 120%;
-}
-/* ***************************** */
+  }
+  /* ***************************** */
   .vaibhav {
     height: 30px;
     width: 110px;
@@ -1148,8 +1212,8 @@
     position: absolute;
     top: 2700px;
   }
-  .fa-terminal{
-    height:20px;
+  .fa-terminal {
+    height: 20px;
     width: 20px;
   }
 }
