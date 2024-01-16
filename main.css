@@ -70,6 +70,9 @@
     left: 580px;
 
 }
+a {
+    cursor: pointer;
+}
 
 h1 {
     display: flex;
@@ -268,10 +271,27 @@ p {
     color: white;
     position: absolute;
     top: 2100px;
-    left: 200px;
+    left: 288px;
 }
-
-
+.label{
+    background-color: transparent;
+}
+.l1{
+    margin-top: 30px;
+    margin-left: 150px;
+}
+.l2{
+    margin-top: 105px;
+    margin-left: 150px;
+}
+.l3{
+    margin-top: 105px;
+    margin-left: 430px;
+}
+.l5{
+    margin-top: 30px;
+    margin-left: 430px;
+}
 .placeholder {
     color: white;
 }
@@ -300,28 +320,68 @@ textarea {
 }
 .e1{
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 150px;
 }
 .e2{
     position: absolute;
-    top: 110px;
+    top: 105px;
     left: 150px;
 }
 .e3{
     position: absolute;
-    top: 50px;
-    left: 400px;
+    top: 30px;
+    left: 428px;
 }
 .e5{
     position: absolute;
-    top: 110px;
-    left: 400px;
+    top: 105px;
+    left: 428px;
 }
 .e4{
     position: absolute;
     top: 380px;
     left: 300px;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.ee1{
+    height: 20px;
+    width: 200px;
+    position: relative;
+    top:80px ;
+    left:166px;
+}
+.ee2{
+    height: 20px;
+    width: 200px;
+    position: relative;
+    top:60px ;
+    left:444px;
+}
+.ee3{
+    height: 20px;
+    width: 200px;
+    position: relative;
+    top:115px ;
+    left:166px;
+}
+.ee4{
+    height: 20px;
+    width: 200px;
+    position: relative;
+    top:95px ;
+    left:444px;
+}
+.ee5{
+    height: 20px;
+    width: 200px;
+    position: relative;
+    top:125px ;
+    left:340px;
 }
 .mymy{
     position: absolute;
