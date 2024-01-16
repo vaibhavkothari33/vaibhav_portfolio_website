@@ -22,6 +22,13 @@
             width: 100%;
         }
 
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
         .fa-brands {
             height: 50px;
             width: 50px;
@@ -361,6 +368,26 @@
                 width: 20px;
             }
         }
+
+        .label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: #d4d4d4;
+            pointer-events: none;
+            transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input:focus {
+            border: 1px solid var(-- primary);
+        }
+
+        .input:is(:focus, :valid)~label {
+            transform: translateY(-120%) scale(0.7);
+            background-color: #1a1a1a;
+            padding-inline: 0.3rem;
+            color: var(-- primary);
+        }
     </style>
 </head>
 
@@ -441,7 +468,7 @@
                 <div class="proimg"><img
                         src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*A2s5TI5LrD6UPRQt.jpg" class="image"
                         alt=""></div>
-                <div class="text">Full Stack Club webite <br><br><br></div>
+                <div class="text">Full Stack Club website <br><br><br></div>
                 <a href="" target="_blank">
                     <div class="github">Github</div>
                 </a><br>
@@ -450,13 +477,13 @@
                 </a>
             </div>
             <div class="pro pro3">
-                <div class="proimg"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/2048_logo.svg"
+                <div class="proimg"><img src="trivia.png"
                         class="image" alt=""></div>
-                <div class="text">Game using J_query <br><br><br></div>
-                <a href="" target="_blank">
+                <div class="text">Trivia-Quiz<br><br><br></div>
+                <a href="https://github.com/vaibhavkothari33/trivia-quiz" target="_blank">
                     <div class="github">Github</div>
                 </a><br>
-                <a href="" target="_blank">
+                <a href="https://vaibhavkothari33.github.io/trivia-quiz/" target="_blank">
                     <div class="preview">Preview</div>
                 </a>
             </div>
@@ -489,32 +516,54 @@
             <div class="con">Contact <span class="my">Me!</span></div>
 
             <div class="contact-form">
-                <div class="visme_d" data-title="Website Contact Form" data-url="y43jm1vg-website-contact-form"
+                <!-- <div class="visme_d" data-title="Website Contact Form" data-url="y43jm1vg-website-contact-form"
                     data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="8161"></div>
-                <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+                <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script> -->
                 <!-- <form action="https://formspree.io/f/xdoqonbj" method="POST">
 
                     <div class="visme_d mymy" data-title="Website Contact Form" data-url="y43jm1vg-website-contact-form"
                     data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="8161"></div>
                     <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
                 </form> -->
-                <!-- <form id="contactForm" action="https://formspree.io/f/xdoqonbj" method="POST">
+                <form id="contactForm" action="#">
+                    <!-- <form id="contactForm" action="https://formspree.io/f/xdoqonbj" method="POST"> -->
 
 
-                    <input type="text" class="edit running-border e1" placeholder="Enter Full Name" name="full_name"
+                    <input type="text" class="edit input running-border e1" placeholder="" id="name" name="full_name"
                         required>
-                    <input type="tel" class="edit running-border e2" placeholder="Mobile Number" name="mobile_number"
-                        required>
-                    <input type="text" class="edit running-border e5" placeholder="Preferred method of contact"
-                        name="contact_method" required>
-                    <textarea rows="4" cols="50" class="running-border" placeholder="Enter Your Message" name="message"
-                        required></textarea>
-                    <input type="email" class="edit running-border e3" placeholder="Email Address" name="email"
-                        required>
-                    <button class="edit running-border e4" type="submit" onclick="submitForm()">Send Message</button>
+
+                    <label for="name" class="label l1 ">Full Name</label>
+                    <div class="error ee1">This field cannot be empty</div>
+                    
+                    <input type="email" class="edit input running-border e3" placeholder="" name="email" id="email"
+                    required>
+                    
+                    <label for="email" class="label l5">E-mail</label>
+                    <div class="error ee2">This field cannot be empty</div>
+                    
+                    <input type="tel" class="edit input running-border e2" placeholder="" id="tell" name="mobile_number"
+                    required>
+                    
+                    <label for="tel" class="label l2">Phone Number</label>
+                    <div class="error ee3">This field cannot be empty</div>
+                    
+                    <input type="text" class="edit input running-border e5" placeholder="" id="contact1"
+                    name="contact_method" required>
+                    
+                    <label for="contact" class="label l3">Prefered way to Contact</label>
+                    <div class="error ee4">This field cannot be empty</div>
+                    
+                    
+                    <textarea rows="4" cols="50" class="running-border" id="message" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Your Message"
+                    name="message" required></textarea>
+                    <!-- <label for="name" class="label l4">Your Message</label> -->
+                    <div class="error ee5">This field cannot be empty</div>
+
+                    <button class="edit input running-border e4" type="submit">Send
+                        Message</button>
 
 
-                </form> -->
+                </form>
             </div>
 
 
@@ -571,7 +620,12 @@
 
     </div>
     <script src="script.js"></script>
-    <script>   function submitForm() {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="contact.js"></script>
+
+    <!-- 
+        <script>   function submitForm() {
             const form = document.getElementById('contactForm');
 
             // Assuming you are using the Fetch API for the form submission
@@ -616,7 +670,8 @@
                     // Handle error
                     console.error(error);
                 });
-        }
+        } -->
+    <script>
         $(document).ready(function () {
             // When a nav link is clicked
             $('.nav2').click(function (e) {
