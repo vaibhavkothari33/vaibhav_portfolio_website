@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal</title>
+    <title>Vaibhav's Terminal</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/d88f3c18b6.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: monospace;
-            background-color: rgb(0, 0, 35);
+            /* /* background-color: rgb(0, 0, 35); */
+            background-color: rgb(28, 28, 28); 
             color: white;
             margin: 0;
             padding: 0;
@@ -33,7 +36,11 @@
         #terminal {
             white-space: pre-wrap;
             height: 400px;
+            overflow-y: scroll;
+
+
         }
+
 
         #terminal-input {
             position: absolute;
@@ -46,86 +53,153 @@
             border: none;
             outline: none;
         }
-        span{
+
+        span {
             color: blue;
         }
+
+        #contact-image {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            /* border-radius: 50%; */
+        }
+
+
+        #contact-link {
+            color: cyan;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(0, 0, 35);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+        .button{
+            height: 50px;
+            width: 50px;
+            background-color: green;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            position: absolute;
+            top: 40px;
+            left: 170px;
+            color: white;
+        }
+        .button:hover {
+    box-shadow: 0 0 20px 5px rgba(22, 93, 6, 0.7);
+    }
+            
+            
+    .fa-solid {
+        padding-top: 10px;
+    }
+
     </style>
 </head>
+
 <body>
+
     <div class="cursor-container">
-    <div id="terminal-window">
-        <div id="terminal">Welcome! Type a <span>help</span> command to get started.</div>
-        <input id="terminal-input" type="text">
-    </div>
-    <script>
-        const terminal = document.getElementById('terminal');
-        const terminalInput = document.getElementById('terminal-input');
+        <a href="index.html"><div class="button"><i class="fa-solid fa-arrow-left"></i></div></a>
+        <div id="terminal-window">
+            <div id="terminal">Welcome! Type a <span>hello</span> command to get started. <br><br></div>
+            <input id="terminal-input" type="text">
+        </div>
+        <script>
+            const terminal = document.getElementById('terminal');
+            const terminalInput = document.getElementById('terminal-input');
+            let isExecuting = false;
 
-        // Flag to track whether a command is being executed
-        let isExecuting = false;
-
-        function writeToTerminal(message) {
-            terminal.innerHTML += message + '\n';
-            terminal.scrollTop = terminal.scrollHeight;
-        }
-
-        function executeCommand(input) {
-            switch (input) {
-                case 'about':
-                    writeToTerminal('Hello, I\'m Vaibhav Kothari, a 18 year old average college going guy who is an ambitious and versatile technology enthusiast with a passion for exploring new tech stacks.');
-                    break;
-                case 'experience':
-                    writeToTerminal('Experience: [ Web Developer at XYZ ]');
-                    break;
-                case 'education':
-                    writeToTerminal('Education: [ B.Tech in Computer Science from Bennet University University ]');
-                    break;
-                case 'skills':
-                    writeToTerminal('Skills: [ JavaScript, Python, HTML, CSS, React, Node.js, Express ]');
-                    break;
-                case 'contact':
-                    writeToTerminal('Contact: [ contact.vaibhavkothari@gmail.com ]');
-                    break;
-                case 'help':
-                    writeToTerminal('Supported commands: [ "about", "experience", "education", "skills", "contact" ,"clear"]');
-                    break;
-                case 'clear':
-                    terminal.innerHTML = ''; // Clear the terminal content
-                    break;
-                default:
-                    writeToTerminal('Unknown command: ' + input);
-                    break;
+            function writeToTerminal(message) {
+                terminal.innerHTML += message + '<br>'; // Add line break after each command
+                terminal.scrollTop = terminal.scrollHeight;
             }
 
-            // Mark the command execution as completed
-            isExecuting = false;
+            function executeCommand(input) {
+                switch (input) {
+                    case 'about':
+                        writeToTerminal("At 19, I'm not just crafting code; I'm decoding victory strategies on the basketball court, smashing my way to success on the badminton court, and solving the Rubik's Cube in under 30 seconds. Mastering algorithms, jump shots, and mind-bending puzzles, I'm the triple-threat tech enthusiast, leaving an indelible mark in both the digital and athletic realms.");
+                        writeToTerminal("")
+                        break;
+                    // case 'experience':
+                    //     writeToTerminal('Experience: [ Web Developer at XYZ ]');
+                    // break;
+                    case 'education':
+                        writeToTerminal('Education: ["As a first-year B.Tech student at Bennett University, I embark on a thrilling journey into the world of Computer Science, fueled by a fervor for machine learning and a commitment to crafting cutting-edge technological marvels."]');
+                        writeToTerminal("")
+                        break;
+                    case 'skills':
+                        writeToTerminal('Skills: [ Java, Python, HTML, CSS, JavaScript , C++ , SQL , Photoshop ]');
+                        writeToTerminal("")
+                        break;
+                    case 'contact':
+                        // Add image and link in the contact command
+                        // writeToTerminal("<img id="contact-image" src="qr-code.png" alt="Contact Image">");
+                        // writeToTerminal();
+                        writeToTerminal('<img id="contact-image" src="qr-code.png" alt="Contact Image">');
+                        writeToTerminal('Contact: [ <a id="contact-link" href="mailto:contact.vaibhavkothari@gmail.com">contact.vaibhavkothari@gmail.com</a> ]');
+                        writeToTerminal('Contact: [ <a id="contact-link" target="blank" href="https://github.com/vaibhavkothari33">Github</a> ]');
+                        writeToTerminal('Contact: [ <a id="contact-link" target="blank" href="https://www.linkedin.com/in/vaibhav-kothari-39549428a/">Linked in</a> ]');
+                        writeToTerminal("")
+                        writeToTerminal("")
+                        break;
+                    case 'hello':
+                        // writeToTerminal('Supported commands: [ "about", "experience", "education", "skills", "contact", "clear" ]');
+                        writeToTerminal('Supported commands: [ "about", "education", "skills", "contact", "clear" ]');
+                        writeToTerminal("")
+                        break;
+                    case 'clear':
+                        terminal.innerHTML = '';
+                        writeToTerminal("")
+                        break;
+                    default:
+                        writeToTerminal('Unknown command: ' + input);
+                        writeToTerminal("")
+                        break;
+                }
 
-            // Enable input after execution
-            terminalInput.disabled = false;
-            terminalInput.focus();
-        }
-
-        function processCommand() {
-            if (!isExecuting) {
-                const input = terminalInput.value.trim();
-                terminalInput.value = '';
-
-                // Mark the command execution as started
-                isExecuting = true;
-
-                // Disable input during execution
-                terminalInput.disabled = true;
-
-                executeCommand(input);
+                isExecuting = false;
+                terminalInput.disabled = false;
+                terminalInput.focus();
             }
-        }
 
-        terminalInput.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') {
-                processCommand();
+            function processCommand() {
+                if (!isExecuting) {
+                    const input = terminalInput.value.trim();
+                    terminalInput.value = '';
+                    isExecuting = true;
+                    terminalInput.disabled = true;
+                    executeCommand(input);
+                }
             }
-        });
-    </script>
+
+            terminalInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    processCommand();
+                }
+            });
+        </script>
     </div>
 </body>
+
 </html>
